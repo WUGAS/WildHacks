@@ -1,18 +1,23 @@
 CREATE DATABASE switch;
 USE switch;
 
+
 CREATE TABLE `groups` (
-  `group_id` int(10) NOT NULL,
+  `group_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(45) NOT NULL,
   `data` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`group_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+ALTER TABLE `switch`.`groups` AUTO_INCREMENT = 0 ,
 
 CREATE TABLE `users` (
   `username` varchar(45) NOT NULL,
   `password` varchar(45) NOT NULL,
   PRIMARY KEY (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
 
 CREATE TABLE `in_group` (
   `username` varchar(45) NOT NULL,
