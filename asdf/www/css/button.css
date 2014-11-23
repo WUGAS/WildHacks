@@ -48,6 +48,11 @@ html,body{
   
   box-shadow:  0 0 0 0 #BBB7AE;
 }
+.inbox{
+  position:absolute;
+  top:20px;
+  left:23px;
+}
 .box:before{
 	content:" ";
 	display:block;

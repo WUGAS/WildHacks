@@ -1,9 +1,34 @@
 //set users
 //call return_winner_ID()
 
+var wwidth;
+var wheight
+
+wwidth, wheight = getWindowSizes();
+
+var server_url = "empty?group=";
+var current_group;
+
+
+function getWindowSizes() {
+  var windowHeight = 0, windowWidth = 0;
+  if (typeof (window.innerWidth) == 'number') {
+      windowHeight = window.innerHeight;
+      windowWidth = window.innerWidth;
+      
+  } else if (document.documentElement && (document.documentElement.clientWidth || document.documentElement.clientHeight)) {
+      windowHeight = document.documentElement.clientHeight;
+      windowWidth = document.documentElement.clientWidth;
+      
+  } else if (document.body && (document.body.clientWidth || document.body.clientHeight)) {
+     windowHeight = document.body.clientHeight;
+     windowWidth = document.body.clientWidth;
+  }
+  return [windowWidth, windowHeight];
+}
+
 function getGroupList() {
 
-	var server_url = "empty?group=";
 
 	var parser= new function(input_data) {
 		//default value
@@ -47,7 +72,11 @@ function getGroupList() {
 
 	for (var i = 0; i < table.length; i++) {
 		var groupEl = document.createElement("a");
-		var groupText = document.createTextNode(table[i][0]);
+		var gname = table[i][0];
+		if (gname == current_group)
+			var groupText = document.createTextNode(gname + '<span class="menu-icon glyphicon glyphicon-play-circle"></span>');
+		else
+			var groupText = document.createTextNode(gname);
 		groupEl.appendChild(groupText);
 		groupEl.className = "list-group-item";
 		groupEl.href(server_url + table[i][1])
@@ -67,8 +96,20 @@ function getGroupList() {
 }
 
 
+//this should perform the socket stuff as well change the background picture to blank
+//it should also change the label whihc displays the group name
+function changeActiveGroup(g_name, g_id)
+{
+	//assign name to label
+	document.getElementById("#groupHead").innerHTML.child = g_name;
 
-function setImage(img_link){
+
+}
+
+
+
+function setImage(img_link)
+{
 	$('#content-wrapper').css("height","100%","background-image", img_link, 
 		"background-repeat","no-repeat", "background-size", "contain", "background-position","center");
 }

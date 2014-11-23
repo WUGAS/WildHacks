@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" ng-app="Dashboard">
 <head>
   <meta charset="UTF-8">
@@ -32,13 +32,14 @@
     <div id="sidebar-wrapper">
       <ul class="sidebar" id = "grps">
         <li class="sidebar-main">
-          <a href="#" ng-click="toggleSidebar()">
-            Switch Views
+          <a style="margin-left:0;margin-right:0" href="#" ng-click="toggleSidebar()">
+            <span style="margin-left:0px;font-size:16px" class="label label-warning"> Switch Views</span>
             <span class="menu-icon glyphicon glyphicon-transfer"></span>
           </a>
         </li>
         <li class='list-group'>
-          <a class="list-group-item" style='color:black;'>Group 1 </a>
+          <a class="list-group-item" style='color:black;'>Group 1      <span class="menu-icon glyphicon glyphicon-play-circle"></span>
+</a>
           <a class="list-group-item" style='color:black;'>Group 1</a>
           <a class="list-group-item" style='color:black;'>Group 2</a>
           <a class="list-group-item" style='color:black;'>Group 3</a>
@@ -73,7 +74,6 @@
             <div class="meta pull-left">
                 <h3>
                   <span id="groupHead" class="label label-info">Group 1</span>
-                  <span class="label label-warning">Switch it</span>
                 </h3>
             </div>
           </div>
@@ -86,9 +86,9 @@
           <div class="row">
 
             <div class="col-xs-12">
-              <div class="box" style="z-index:100;position:relative;top:125px;">
+              <div class="box" style="z-index:100;position:relative;top:125px;" data-switch-button="switch-button">
               </br> 
-                <p>Push</p>
+                <p class="inbox">Push</p>
               </div>
           </div>
         </div>

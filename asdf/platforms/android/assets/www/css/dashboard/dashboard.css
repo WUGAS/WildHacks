@@ -41,7 +41,7 @@
     margin-bottom: 0px;
   }
   #page-wrapper {
-    padding-left: 70px;
+    padding-left: 48px;
     height: 100%
   }
   #sidebar-wrapper {
@@ -106,7 +106,7 @@
   ul.sidebar .sidebar-main .menu-icon {
     float: right;
     font-size: 18px;
-    padding-right: 28px;
+    padding-right: 5px;
     line-height: 60px;
   }
   ul.sidebar .sidebar-title {
