@@ -1,4 +1,7 @@
 -- insert dummy users
+
+USE switch;
+
 INSERT INTO `switch`.`users` (`users`.`username`, `users`.`password`)
 VALUES ('tester1','rootroot');
 
