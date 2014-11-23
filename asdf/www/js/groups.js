@@ -1,5 +1,8 @@
 //set users
 //call return_winner_ID()
+
+var server_url = "empty?group=";
+
 var parser= new function(input_data) {
 	//default value
 	this.table=[];
@@ -41,6 +44,17 @@ for (var i = 0; i < parser.table.length; i++) {
 // console.log(parser.table);
 
 for (var i = 0; i < table.length; i++) {
+	var groupEl = document.createElement("a");
+	var groupText = document.createTextNode(table[i][0]);
+	groupEl.appendChild(groupText);
+	groupEl.className = "list-group-item";
+	groupEl.href(server_url + table[i][1])
+	console.log(groupEl);
+	document.getElementById("grps").appendChild(groupEl);
+}
+
+
+for (var i = 0; i < table.length; i++) {
 	var groupEl = document.createElement("li");
 	var groupText = document.createTextNode(table[i][0]);
 	groupEl.appendChild(groupText);
@@ -48,4 +62,5 @@ for (var i = 0; i < table.length; i++) {
 	console.log(groupEl);
 	document.getElementById("grps").appendChild(groupEl);
 }
+
 
