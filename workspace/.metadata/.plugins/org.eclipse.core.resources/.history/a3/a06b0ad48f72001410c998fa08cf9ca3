@@ -1,0 +1,114 @@
+package com.wugas.wildhacks;
+
+import java.util.ArrayList;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.app.ListActivity;
+import android.view.Menu;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.view.*;
+
+public class MainActivity extends Activity {
+	private ArrayList<String> groups;
+	private ArrayList<String> ids;
+	
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        final ListView listView = (ListView) findViewById(R.id.listview);
+        ids = new ArrayList<String>();
+        String json = groupGet();
+        groups = getGroups(json);
+        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+        		android.R.layout.simple_list_item_1, groups);
+        listView.setAdapter(adapter);
+        
+        SocketIO socketio = new SocketIO("http://YOUR_SERVER_IP_GOES_HERE:4732");
+        socketio.connect(new IOCallback() {
+            @Override
+            public void onMessage(JSONObject json, IOAcknowledge ack) {
+                try {
+                    System.out.println("Server said:" + json.toString(2));
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            public void onMessage(String data, IOAcknowledge ack) {
+                System.out.println("Server said: " + data);
+            }
+
+            @Override
+            public void onError(SocketIOException socketIOException) {
+                System.out.println("an Error occured");
+                socketIOException.printStackTrace();
+            }
+
+            @Override
+            public void onDisconnect() {
+                System.out.println("Connection terminated.");
+               }
+
+            @Override
+            public void onConnect() {
+                System.out.println("Connection established");
+            }
+
+            @Override
+            public void on(String event, IOAcknowledge ack, Object... args) {
+                System.out.println("Server triggered event '" + event + "'");
+            }
+        });
+        
+        
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+        	@Override
+        	public void onItemClick(AdapterView<?> parent, final View view,
+        			int position, long id) {
+//        		final String item = (String) parent.getItemAtPosition(position);
+        	}
+        });
+        setContentView(R.layout.activity_main);
+    }
+    
+    private String groupGet() {
+    	return "{groups: [{name:wugas, id:w123}, {name:test, id:t123}]}";
+    }
+    
+    private ArrayList<String> getGroups(String json) {
+    	ArrayList<String> findGroups = new ArrayList<String>();
+    	try {
+			JSONObject js = new JSONObject(json);
+			JSONArray grps = js.getJSONArray("groups");
+			for (int i = 0; i < grps.length(); i++) {
+				JSONObject name_id = grps.getJSONObject(i);
+				findGroups.add(name_id.getString("name"));
+				ids.add(name_id.getString("id"));
+			}
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			findGroups.add("error pulling");
+			e.printStackTrace();
+		}
+    	
+    	return findGroups;
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+    
+}
