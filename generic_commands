@@ -1,0 +1,9 @@
+/get-group-list?user=#
+
+/create-group?name=#
+
+/create-user?name=#&password=#
+
+/leave-group?name=#&group=#
+
+/join-group?name=#&group=#
