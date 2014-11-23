@@ -107,9 +107,26 @@ function changeActiveGroup(g_name, g_id)
 }
 
 
+function goCatz() {
+	var t1 = setTimeout(function(){document.getElementById('content-wrapper').style.backgroundImage="url('http://4.bp.blogspot.com/-QoXr-UICkjo/U1Bg4X-gOtI/AAAAAAAAEkk/UKSupiMil3g/s1600/northwestern.jpg')"},6000);
+    var t2 = setTimeout(function(){document.getElementById('content-wrapper').style.backgroundImage="url('http://uniformcritics.com/wp-content/uploads/2013/08/2013-northwestern-white-uniform-620x577.jpg')"},12000);
+    var t3 = setTimeout(function(){document.getElementById('content-wrapper').style.backgroundImage="url('http://www.thesportsbank.net/core/wp-content/uploads/2012/07/northwestern-uniforms.jpg')"},18000);
+    var t4 = setTimeout(function(){document.getElementById('content-wrapper').style.backgroundImage="url('http://www.thesportsbank.net/core/wp-content/uploads/2012/07/northwestern-uniforms.jpg')"},24000);
+    var t5 = setTimeout(function(){document.getElementById('content-wrapper').style.backgroundImage="url('http://www.thesportsbank.net/core/wp-content/uploads/2012/07/under-armour-northwestern-uniforms-2012-away-02.jpg')"},30000);
+}
+
+function goCatz() {
+	var t1 = setTimeout(function(){document.getElementById('content-wrapper').style.backgroundImage="url('http://images5.fanpop.com/image/photos/26900000/Nicolas-Cage-nicolas-cage-26969982-1702-2560.jpg')"},6000);
+    var t2 = setTimeout(function(){document.getElementById('content-wrapper').style.backgroundImage="url('http://coolspotters.com/files/photos/58338/nicolas-cage-profile.jpg?1357450141')"},12000);
+    var t3 = setTimeout(function(){document.getElementById('content-wrapper').style.backgroundImage="url('http://upload.wikimedia.org/wikipedia/commons/f/f3/Nicolas_Cage_-_66%C3%A8me_Festival_de_Venise_(Mostra).jpg')"},18000);
+    var t4 = setTimeout(function(){document.getElementById('content-wrapper').style.backgroundImage="url('http://tjbrearton.files.wordpress.com/2013/01/seenosideburns.jpg')"},24000);
+    var t5 = setTimeout(function(){document.getElementById('content-wrapper').style.backgroundImage="url('http://www.thesportsbank.net/core/wp-content/uploads/2012/07/under-armour-northwestern-uniforms-2012-away-02.jpg')"},30000);
+}
+
 
 function setImage(img_link)
 {
 	$('#content-wrapper').css("height","100%","background-image", img_link, 
 		"background-repeat","no-repeat", "background-size", "contain", "background-position","center");
 }
+
