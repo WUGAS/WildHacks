@@ -21,7 +21,7 @@ CREATE TABLE `in_group` (
   `in_id` int(11) NOT NULL AUTO_INCREMENT,
   `group_id` int(11) NOT NULL,
   `username` varchar(45) NOT NULL,
-  `group_score` varchar(45) NOT NULL DEFAULT '0',
+  `group_score` INT NOT NULL DEFAULT 0,
   PRIMARY KEY (`in_id`),
   KEY `fk_username_idx` (`username`),
   KEY `fk_group_id_idx` (`group_id`),

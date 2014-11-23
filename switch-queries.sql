@@ -39,5 +39,8 @@ DELETE FROM `switch`.`in_group`
 WHERE `in_group`.`username`=? AND `in_group`.`group_id`=?;
 
 --Adds a group to the table
-INSERT INTO `switch`.`groups` (`groups`.`groyp)
-VALUES ()
+INSERT INTO `switch`.`groups` (`groups`.`group_id`, `groups`.`name`)
+VALUES (?,?);
+
+INSERT INTO `switch`.`in_group` ('in_group'.`username`,`in_group`.`group_id`)
+VALUES (?, ?);
