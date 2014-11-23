@@ -23,7 +23,7 @@
 
 /* Base */
   html {
-    overflow-y: scroll;
+    overflow-y: hidden;
   }
   body {
     background: #f3f3f3;
@@ -47,7 +47,7 @@
   #sidebar-wrapper {
     margin-left: -150px;
     left: -30px;
-    width: 250px;
+    width: 225px;
     position: fixed;
     height: 100%;
     z-index: 999;
@@ -82,7 +82,7 @@
     padding: 0;
     margin: 0;
     list-style: none;
-    text-indent: 20px;
+    text-indent: 28px;
     overflow-x: hidden;
     overflow-y: auto;
   }
@@ -94,7 +94,7 @@
     display: block;
     float: left;
     text-decoration: none;
-    width: 250px;  
+    width: 220px;  
   }
   ul.sidebar .sidebar-main {
     height: 65px;

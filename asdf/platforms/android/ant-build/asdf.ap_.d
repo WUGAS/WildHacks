@@ -57,6 +57,7 @@
 /Users/Adel/GitHub/WildHacks/asdf/platforms/android/assets/www/js/angular-cookies.js \
 /Users/Adel/GitHub/WildHacks/asdf/platforms/android/assets/www/js/angular.min.js \
 /Users/Adel/GitHub/WildHacks/asdf/platforms/android/assets/www/js/dashboard \
+/Users/Adel/GitHub/WildHacks/asdf/platforms/android/assets/www/js/fastclick.js \
 /Users/Adel/GitHub/WildHacks/asdf/platforms/android/assets/www/js/groups.js \
 /Users/Adel/GitHub/WildHacks/asdf/platforms/android/assets/www/js/ng-bootstrap-tpls.min.js \
 /Users/Adel/GitHub/WildHacks/asdf/platforms/android/assets/www/js/angular/bootstrap.js \

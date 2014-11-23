@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" ng-app="Dashboard">
 <head>
   <meta charset="UTF-8">
@@ -32,28 +32,29 @@
     <div id="sidebar-wrapper">
       <ul class="sidebar" id = "grps">
         <li class="sidebar-main">
-          <a href="#" ng-click="toggleSidebar()">
-            Groups
+          <a style="margin-left:0;margin-right:0" href="#" ng-click="toggleSidebar()">
+            <span style="margin-left:0px;font-size:16px" class="label label-warning"> Switch Views</span>
             <span class="menu-icon glyphicon glyphicon-transfer"></span>
           </a>
         </li>
         <li class='list-group'>
-          <a class="list-group-item" style='color:black;'>Group 1</a>
+          <a class="list-group-item" style='color:black;'>Group 1      <span class="menu-icon glyphicon glyphicon-play-circle"></span>
+</a>
           <a class="list-group-item" style='color:black;'>Group 1</a>
           <a class="list-group-item" style='color:black;'>Group 2</a>
           <a class="list-group-item" style='color:black;'>Group 3</a>
           <a class="list-group-item" style='color:black;'>Group 4</a>
         </li>
-
+<!-- #627cb7-->
       </ul>
       <div class="sidebar-footer">
         <div class="col-xs-12">
-          <div style="color: #627cb7;margin-top:10px;" onclick="someFunction()">
-            Random
+          <div  style="margin-top:10px;" onclick="someFunction()">
+            <span style="color: white;"> +Create New Group</span>
           </div>
           <script>
             function someFunction() {
-              var person = prompt("Please enter your name", "");
+              var person = prompt("Please enter a Group Name", "");
               console.log(person);
             }
           </script>
@@ -63,17 +64,17 @@
 
     <!-- End Sidebar -->
 
-    <div id="content-wrapper">
+    <div style="height:100%; background-image: url(http://upload.wikimedia.org/wikipedia/commons/thumb/9/91/F-15_vertical_deploy.jpg/780px-F-15_vertical_deploy.jpg); background-repeat:no-repeat;background-size: contain ; background-position:center)" id="content-wrapper">
       <div class="page-content">
 
         <!-- Header Bar -->
 
-        <div class="row header">
+        <div class="row">
           <div class="col-xs-12">
             <div class="meta pull-left">
-              <div class="page" id="groupHead">
-                Group 1
-              </div>
+                <h3>
+                  <span id="groupHead" class="label label-info">Group 1</span>
+                </h3>
             </div>
           </div>
         </div>
@@ -83,9 +84,12 @@
         <!-- Main Content -->
         <div class="container">
           <div class="row">
+
             <div class="col-xs-12">
-              <div class="box" style="position:relative;top:125px;">
-            </div>
+              <div class="box" style="z-index:100;position:relative;top:125px;">
+              </br> 
+                <p>Push</p>
+              </div>
           </div>
         </div>
 

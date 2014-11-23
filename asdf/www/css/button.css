@@ -68,7 +68,7 @@ p, p a{
   text-shadow: 1px 1px 1px white;
   color:#7E7E7E;
   text-align:center;
-  font-size:18px;
+  font-size:22px;
   line-height:2;
   text-decoration:none;
   margin-bottom:30px;
@@ -83,4 +83,17 @@ p, p a{
   border-radius:50%;
   background: linear-gradient(#AEADAA,#BAB7AE);
   margin:42px auto;
+}
+.stretchedToMargin {
+    display: block;
+    position:absolute;
+    height:auto;
+    bottom:0;
+    top:0;
+    left:0;
+    right:0;
+    margin-top:0px;
+    margin-bottom:0px;
+    margin-right:0px;
+    margin-left:0px;
 }
