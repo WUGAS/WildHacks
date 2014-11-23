@@ -1,0 +1,73 @@
+2014-11-22 17:55:08.482 WildHacks[12218:540861] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/suhong/Library/Developer/CoreSimulator/Devices/A1247D58-42C2-432B-B659-0BDF870A9E43/data/Containers/Data/Application/8C61E096-6EC6-4E9B-A33D-18D234A85A7C/Library/Cookies/Cookies.binarycookies
+2014-11-22 17:55:08.570 WildHacks[12218:540861] Apache Cordova native platform version 3.6.3 is starting.
+2014-11-22 17:55:08.571 WildHacks[12218:540861] Multi-tasking -> Device: YES, App: YES
+2014-11-22 17:55:08.613 WildHacks[12218:540861] Unlimited access to network resources
+2014-11-22 17:55:08.626 WildHacks[12218:540861] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+
+2014-11-22 17:55:09.688 WildHacks[12218:540861] Resetting plugins due to page load.
+2014-11-22 17:55:09.843 WildHacks[12218:540861] Finished load of: file:///Users/suhong/Library/Developer/CoreSimulator/Devices/A1247D58-42C2-432B-B659-0BDF870A9E43/data/Containers/Bundle/Application/6B5DDCD3-7869-4B14-A51E-BB8FF9513D8F/WildHacks.app/www/index.html
+2014-11-22 18:02:00.262 WildHacks[12490:545298] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/suhong/Library/Developer/CoreSimulator/Devices/A1247D58-42C2-432B-B659-0BDF870A9E43/data/Containers/Data/Application/BD4E8D22-5B25-4136-98BF-72F914ACBE41/Library/Cookies/Cookies.binarycookies
+2014-11-22 18:02:00.423 WildHacks[12490:545298] Apache Cordova native platform version 3.6.3 is starting.
+2014-11-22 18:02:00.424 WildHacks[12490:545298] Multi-tasking -> Device: YES, App: YES
+2014-11-22 18:02:00.433 WildHacks[12490:545298] Unlimited access to network resources
+2014-11-22 18:02:00.436 WildHacks[12490:545298] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+
+2014-11-22 18:02:00.664 WildHacks[12490:545298] Resetting plugins due to page load.
+2014-11-22 18:02:00.766 WildHacks[12490:545298] Finished load of: file:///Users/suhong/Library/Developer/CoreSimulator/Devices/A1247D58-42C2-432B-B659-0BDF870A9E43/data/Containers/Bundle/Application/013E67AB-B366-41B3-B5D7-F4545C5D89D2/WildHacks.app/www/index.html
+2014-11-22 18:02:05.816 WildHacks[12490:545298] CDVWebViewDelegate: Navigation started when state=1
+2014-11-22 18:02:05.817 WildHacks[12490:545298] Failed to load webpage with error: CDVWebViewDelegate: Navigation started when state=1
+2014-11-22 18:02:07.810 WildHacks[12490:545298] CDVWebViewDelegate: Navigation started when state=1
+2014-11-22 18:02:07.811 WildHacks[12490:545298] Failed to load webpage with error: CDVWebViewDelegate: Navigation started when state=1
+2014-11-22 18:07:23.416 WildHacks[12736:549090] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/suhong/Library/Developer/CoreSimulator/Devices/A1247D58-42C2-432B-B659-0BDF870A9E43/data/Containers/Data/Application/13716D27-4EAC-47BA-92BC-25B3682A6F7C/Library/Cookies/Cookies.binarycookies
+2014-11-22 18:07:23.578 WildHacks[12736:549090] Apache Cordova native platform version 3.6.3 is starting.
+2014-11-22 18:07:23.578 WildHacks[12736:549090] Multi-tasking -> Device: YES, App: YES
+2014-11-22 18:07:23.585 WildHacks[12736:549090] Unlimited access to network resources
+2014-11-22 18:07:23.588 WildHacks[12736:549090] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+
+2014-11-22 18:07:23.798 WildHacks[12736:549090] Resetting plugins due to page load.
+2014-11-22 18:07:23.888 WildHacks[12736:549090] Finished load of: file:///Users/suhong/Library/Developer/CoreSimulator/Devices/A1247D58-42C2-432B-B659-0BDF870A9E43/data/Containers/Bundle/Application/5BF46EA0-FAE4-4313-B202-9F8962141855/WildHacks.app/www/index.html
+2014-11-22 18:10:55.016 WildHacks[12948:551262] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/suhong/Library/Developer/CoreSimulator/Devices/A1247D58-42C2-432B-B659-0BDF870A9E43/data/Containers/Data/Application/D108CFDF-2A86-46DE-AA3F-A08A7FF00F93/Library/Cookies/Cookies.binarycookies
+2014-11-22 18:10:55.182 WildHacks[12948:551262] Apache Cordova native platform version 3.6.3 is starting.
+2014-11-22 18:10:55.183 WildHacks[12948:551262] Multi-tasking -> Device: YES, App: YES
+2014-11-22 18:10:55.192 WildHacks[12948:551262] Unlimited access to network resources
+2014-11-22 18:10:55.195 WildHacks[12948:551262] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+
+2014-11-22 18:10:55.401 WildHacks[12948:551262] Resetting plugins due to page load.
+2014-11-22 18:10:55.653 WildHacks[12948:551262] Finished load of: file:///Users/suhong/Library/Developer/CoreSimulator/Devices/A1247D58-42C2-432B-B659-0BDF870A9E43/data/Containers/Bundle/Application/7627FB00-C05C-489C-88DB-F6317633BDB1/WildHacks.app/www/index.html
+2014-11-22 18:24:14.436 WildHacks[13248:558625] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/suhong/Library/Developer/CoreSimulator/Devices/A1247D58-42C2-432B-B659-0BDF870A9E43/data/Containers/Data/Application/675A6258-D036-4ABB-B953-6F3268E25074/Library/Cookies/Cookies.binarycookies
+2014-11-22 18:24:14.603 WildHacks[13248:558625] Apache Cordova native platform version 3.6.3 is starting.
+2014-11-22 18:24:14.604 WildHacks[13248:558625] Multi-tasking -> Device: YES, App: YES
+2014-11-22 18:24:14.612 WildHacks[13248:558625] Unlimited access to network resources
+2014-11-22 18:24:14.615 WildHacks[13248:558625] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+
+2014-11-22 18:24:14.818 WildHacks[13248:558625] Resetting plugins due to page load.
+2014-11-22 18:24:15.180 WildHacks[13248:558625] Finished load of: file:///Users/suhong/Library/Developer/CoreSimulator/Devices/A1247D58-42C2-432B-B659-0BDF870A9E43/data/Containers/Bundle/Application/BAC2F4A6-9471-4331-BB98-44802A3843F8/WildHacks.app/www/index.html
+2014-11-22 18:24:44.346 WildHacks[13248:558625] CDVWebViewDelegate: Navigation started when state=1
+2014-11-22 18:24:44.346 WildHacks[13248:558625] Failed to load webpage with error: CDVWebViewDelegate: Navigation started when state=1
+2014-11-22 18:24:47.891 WildHacks[13248:558625] CDVWebViewDelegate: Navigation started when state=1
+2014-11-22 18:24:47.891 WildHacks[13248:558625] Failed to load webpage with error: CDVWebViewDelegate: Navigation started when state=1
