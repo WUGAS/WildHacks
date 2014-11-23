@@ -16,12 +16,12 @@
   <link rel="stylesheet" type="text/css" href="css/themes/green.css">
   <link rel="stylesheet" type="text/css" href="css/themes/red.css">
   -->
-
+  <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/angular.min.js"></script>
   <script type="text/javascript" src="js/angular-cookies.js"></script>
   <script type="text/javascript" src="js/ng-bootstrap-tpls.min.js"></script>
   <script type="text/javascript" src="js/angular/bootstrap.js"></script>
-  
+
 
 </head>
 <body ng-controller="MasterCtrl">
@@ -37,14 +37,19 @@
             <span class="menu-icon glyphicon glyphicon-transfer"></span>
           </a>
         </li>
-        <li class="sidebar-title"><span>GROUP 1</span></li>
-        <li class="sidebar-title separator"><span>CHAMPIONS</span></li>
-        <li class="sidebar-title separator"><span>LOSERS</span></li>
+        <li class='list-group'>
+          <a class="list-group-item" style='color:black;'>Group 1</a>
+          <a class="list-group-item" style='color:black;'>Group 1</a>
+          <a class="list-group-item" style='color:black;'>Group 2</a>
+          <a class="list-group-item" style='color:black;'>Group 3</a>
+          <a class="list-group-item" style='color:black;'>Group 4</a>
+        </li>
+
       </ul>
       <div class="sidebar-footer">
         <div class="col-xs-12">
           <div style="color: #627cb7;margin-top:10px;" onclick="someFunction()">
-            Add a group
+            Random
           </div>
           <script>
             function someFunction() {
