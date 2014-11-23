@@ -27,6 +27,9 @@ html,body{
   cursor:pointer;
   position:relative;
 }
+.box.center{
+  top: 50%; 
+}
 .box:active{
   width:100px;
   height:100px;

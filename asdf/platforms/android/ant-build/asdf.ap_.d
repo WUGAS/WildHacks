@@ -57,6 +57,7 @@
 /Users/suhong/WildHacks/asdf/platforms/android/assets/www/js/angular-cookies.js \
 /Users/suhong/WildHacks/asdf/platforms/android/assets/www/js/angular.min.js \
 /Users/suhong/WildHacks/asdf/platforms/android/assets/www/js/dashboard \
+/Users/suhong/WildHacks/asdf/platforms/android/assets/www/js/groups.js \
 /Users/suhong/WildHacks/asdf/platforms/android/assets/www/js/ng-bootstrap-tpls.min.js \
 /Users/suhong/WildHacks/asdf/platforms/android/assets/www/js/angular/bootstrap.js \
 /Users/suhong/WildHacks/asdf/platforms/android/assets/www/js/dashboard/controllers \
