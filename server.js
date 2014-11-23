@@ -1,39 +1,66 @@
 var DBNAME = 'switch';
+var map = {};
 var express = require("express"),
 	app = express(),
 	http = require('http'),
 	server = http.createServer(app),
 	io = require('socket.io').listen(server),
 	mysql = require('mysql'),
+	bodyParser = require('body-parser'),
 	connection = mysql.createConnection({
 		host: 'localhost',
 		user: 'root',
 		password: ''
 	}),
 	message = function(data) {
-		console.log(data);
+		if (data.group in map) {
+			if (data.id in map[data.group]) {
+				map[data.group][data.id] += data.score;
+			} else {
+				map[data.group][data.id] = data.score;
+			}
+		} else {
+			map[data.group] = {
+
+			};
+
+			map[data.group][data.id] = data.score;
+		}
+
+		for (var key in map[data.group]) {
+			if (map[data.group][key] > 1) {
+				console.log('emit image');
+				io.to(data.group).emit('image', data);
+				break;
+			}
+		}
 	},
 	disconnect = function() {
 		console.log('a user disconnected');
 	},
 	joinRoom = function(data) {
-		SOCKET.join(data.room);
-		console.log(data.room);
+		SOCKET.join(data.group);
+		console.log(data.group);
+		console.log(data.id);
+		
+		var query = 'INSERT INTO in_group (in_group.username, in_group.group_id) VALUES ("' + data.id + '", ' + data.group + ')';
+		connection.query(query, function(err, rows, fields) {
+			if (err) return;
+		});
 	},
 	leaveRoom = function(data) {
-
+		SOCKET.leave(data.group);
+		console.log(data.group);
 	},
 	stripTags = function(str) {
 		return str.replace(/</g, "&lt;").replace(/>/g, "&gt;");
 	},
 	updateUser = function(data) {
-		// adel write a query here to update user information
-		var query = 'show tables';
+		var query = 'UPDATE in_group SET in_group.group_score=' + data.score + ' WHERE in_group.in_id="' + data.group + '"';
 
 		connection.query(query, function(err, rows, fields) {
 			if (err) throw err;
 
-			// process the data in this callback if needed...
 			console.log(rows);
 		});
 	};
@@ -48,17 +75,27 @@ io.on('connection', function(socket) {
 });
 
 app.get('/get-group-list', function(req, res) {
-	var query = 'select * from users';
+	var query = 'SELECT g.name, g.group_id, dat.group_score FROM groups as g JOIN in_group as dat ON (g.group_id = dat.group_id) WHERE dat.username="' + req.query.user + '"';
 	connection.query(query, function(err, rows, fields) {
 		if (err) throw err;
-		// process the data in this callback if needed...
+		res.send(rows);
+	});
+});
+
+app.use(bodyParser.urlencoded({
+	extended: true
+}));
+
+app.get('/create-group', function(req, res) {
+	var query = 'INSERT INTO switch.groups ( groups.name) VALUES ("' + req.query.name + '")';
+	connection.query(query, function(err, rows, fields) {
+		if (err) throw err;
 		res.send(rows);
 	});
 });
 
 server.listen(3000, function() {
 	console.log('listening on *:3000');
-
 	// tell node which database to use
 	var query = 'use ' + DBNAME;
 	connection.query(query, function(err, rows, fields) {
