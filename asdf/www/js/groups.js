@@ -7,6 +7,7 @@ var wheight
 wwidth, wheight = getWindowSizes();
 
 var server_url = "empty?group=";
+var current_group;
 
 
 function getWindowSizes() {
@@ -71,7 +72,11 @@ function getGroupList() {
 
 	for (var i = 0; i < table.length; i++) {
 		var groupEl = document.createElement("a");
-		var groupText = document.createTextNode(table[i][0]);
+		var gname = table[i][0];
+		if (gname == current_group)
+			var groupText = document.createTextNode(gname + '<span class="menu-icon glyphicon glyphicon-play-circle"></span>');
+		else
+			var groupText = document.createTextNode(gname);
 		groupEl.appendChild(groupText);
 		groupEl.className = "list-group-item";
 		groupEl.href(server_url + table[i][1])
